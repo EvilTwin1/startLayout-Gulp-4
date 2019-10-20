@@ -1,38 +1,40 @@
 const 	gulp 		  = require('gulp');
 const	imagemin 	  = require('gulp-imagemin');
 const	concat        = require('gulp-concat');
-const	sourcemaps    = require('gulp-sourcemaps');
+// const	sourcemaps    = require('gulp-sourcemaps');
 const	sass          = require('gulp-sass');
 const	autoprefixer  = require('gulp-autoprefixer');
 const	cleanCSS      = require('gulp-clean-css');
 const	uglify        = require('gulp-uglify');
 const	rename        = require('gulp-rename');
+const   clean         = require('gulp-clean');
 const   browserSync   = require('browser-sync').create();
 
 
 
 function styles(){
 	return gulp.src('app/scss/*.*')
-	.pipe(sourcemaps.init())
+	// .pipe(sourcemaps.init())
 	.pipe(sass())
 	.pipe(autoprefixer({
 		overrideBrowserslist: ['last 2 versions'],
 		cascade: false
 	}))
 	.pipe(cleanCSS({
-		level: 2
+		level: 1
 	}))
 	.pipe(rename({
 		suffix: '.min'
 	}))
-	.pipe(sourcemaps.write('/'))
+	// .pipe(sourcemaps.write('/'))
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.reload({stream: true}));
 }
 
 function libsJs() {
 	return gulp.src([
-		'app/libs/jquery/jquery.min.js'
+		'app/libs/jquery/jquery.min.js',
+		'app/libs/OwlCarousel/owl.carousel.min.js',
 		])
 	.pipe(concat('libs.js'))
 	.pipe(gulp.dest('app/js/'))
@@ -84,6 +86,11 @@ function replaceFonts() {
 		.pipe(gulp.dest('dist/webfonts'))
 }
 
+function replaceVideo() {
+	return gulp.src('app/video/*.*')
+		.pipe(gulp.dest('dist/video'))
+}
+
 function replaceStyles() {
 	return gulp.src('app/css/*.*')
 	.pipe(gulp.dest('dist/css'));
@@ -92,6 +99,12 @@ function replaceStyles() {
 function replaceScripts(){
 	return gulp.src('app/js/script.min.js')
 	.pipe(gulp.dest('dist/js'))
+}
+
+ 
+function cleanDir() {
+    return gulp.src('dist')
+        .pipe(clean({force: true}))
 }
 
 function watch(){
@@ -107,4 +120,5 @@ function watch(){
 }
 gulp.task('default', watch);
 
-gulp.task('build', gulp.series(gulp.parallel(styles,libsJs,mainJs,scripts),libsJs,mainJs,scripts, replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceStyles, replaceScripts));
+// gulp.task('build', gulp.series(cleanDir,styles,libsJs,mainJs,scripts,libsJs,mainJs,scripts, replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceVideo, replaceStyles, replaceScripts));
+gulp.task('build', gulp.series(cleanDir,gulp.parallel(styles,libsJs,mainJs,scripts), replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceVideo, replaceStyles, replaceScripts));
