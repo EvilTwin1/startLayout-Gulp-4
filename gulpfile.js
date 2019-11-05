@@ -73,9 +73,9 @@ function replaceLibs() {
 }
 
 function replaceImagemin() {
-	return gulp.src('app/img/**/*')
+	return gulp.src('app/images/**/*')
 		.pipe(imagemin())
-		.pipe(gulp.dest('dist/img'))
+		.pipe(gulp.dest('dist/images'))
 }
 
 function replaceFonts() {
