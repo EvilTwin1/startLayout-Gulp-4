@@ -7,10 +7,8 @@ const	autoprefixer  = require('gulp-autoprefixer');
 const	cleanCSS      = require('gulp-clean-css');
 const	uglify        = require('gulp-uglify');
 const	rename        = require('gulp-rename');
-const   clean         = require('gulp-clean');
+const	clean        = require('gulp-clean');
 const   browserSync   = require('browser-sync').create();
-
-
 
 function styles(){
 	return gulp.src('app/scss/*.*')
@@ -34,7 +32,6 @@ function styles(){
 function libsJs() {
 	return gulp.src([
 		'app/libs/jquery/jquery.min.js',
-		'app/libs/OwlCarousel/owl.carousel.min.js',
 		])
 	.pipe(concat('libs.js'))
 	.pipe(gulp.dest('app/js/'))
@@ -101,7 +98,6 @@ function replaceScripts(){
 	.pipe(gulp.dest('dist/js'))
 }
 
- 
 function cleanDir() {
     return gulp.src('dist')
         .pipe(clean({force: true}))
@@ -118,7 +114,7 @@ function watch(){
 	gulp.watch(['app/js/**/main.js','app/js/**/libs.js'], gulp.series(scripts));
 	gulp.watch("app/*.html").on('change', browserSync.reload);
 }
+
 gulp.task('default', watch);
 
-// gulp.task('build', gulp.series(cleanDir,styles,libsJs,mainJs,scripts,libsJs,mainJs,scripts, replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceVideo, replaceStyles, replaceScripts));
 gulp.task('build', gulp.series(cleanDir,gulp.parallel(styles,libsJs,mainJs,scripts), replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceVideo, replaceStyles, replaceScripts));
