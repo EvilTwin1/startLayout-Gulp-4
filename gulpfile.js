@@ -31,11 +31,10 @@ function styles(){
 
 function libsJs() {
 	return gulp.src([
-		'app/libs/jquery/jquery.min.js',
+		'node_modules/jquery/dist/jquery.min.js'
 		])
 	.pipe(concat('libs.js'))
 	.pipe(gulp.dest('app/js/'))
-	
 }
 
 function mainJs() {
@@ -43,7 +42,6 @@ function mainJs() {
 		'app/js/main.js'
 		])
 	.pipe(gulp.dest('app/js'))
-	
 }
 
 function scripts(){
@@ -115,6 +113,7 @@ function watch(){
 	gulp.watch("app/*.html").on('change', browserSync.reload);
 }
 
-gulp.task('default', watch);
 
-gulp.task('build', gulp.series(cleanDir,gulp.parallel(styles,libsJs,mainJs,scripts), replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceVideo, replaceStyles, replaceScripts));
+
+gulp.task('default', watch);
+gulp.task('build', gulp.series(cleanDir,styles,libsJs,mainJs,scripts, replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceVideo, replaceStyles, replaceScripts));
