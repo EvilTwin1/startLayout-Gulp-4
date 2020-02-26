@@ -1,3 +1,5 @@
 $(document).ready(function() {
-    alert( "ready!" );
+ 
+    $('.multiple-items').slick({});
+          
 });

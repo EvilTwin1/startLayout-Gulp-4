@@ -31,7 +31,8 @@ function styles(){
 
 function libsJs() {
 	return gulp.src([
-		'node_modules/jquery/dist/jquery.min.js'
+		'node_modules/jquery/dist/jquery.min.js',
+		'node_modules/slick-carousel/slick/slick.min.js'
 		])
 	.pipe(concat('libs.js'))
 	.pipe(gulp.dest('app/js/'))
@@ -59,6 +60,10 @@ function scripts(){
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
 }
+gulp.task('scriptjs', libsJs);
+
+
+
 
 function replaceHtml() {
 	return gulp.src('app/*.html')
@@ -100,6 +105,10 @@ function cleanDir() {
     return gulp.src('dist')
         .pipe(clean({force: true}))
 }
+gulp.task('build', gulp.series(cleanDir,styles,libsJs,mainJs,scripts, replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceVideo, replaceStyles, replaceScripts));
+
+
+
 
 function watch(){
 	browserSync.init({
@@ -112,8 +121,4 @@ function watch(){
 	gulp.watch(['app/js/**/main.js','app/js/**/libs.js'], gulp.series(scripts));
 	gulp.watch("app/*.html").on('change', browserSync.reload);
 }
-
-
-
 gulp.task('default', watch);
-gulp.task('build', gulp.series(cleanDir,styles,libsJs,mainJs,scripts, replaceHtml, replaceLibs, replaceImagemin, replaceFonts, replaceVideo, replaceStyles, replaceScripts));
