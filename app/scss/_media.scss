@@ -4,12 +4,80 @@
 /*==========  Desktop First  ==========*/
 
 
+
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {}
+@media only screen and (max-width : 2560px) {
+  .slider .slick-prev {
+    left: 15%;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.28);
+    width: 40px;
+    height: 40px;
+    &:before{
+      content: '\f053';
+      color: rgba(10, 125, 56, 0.56);
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 25px;
+    }
+  }
+
+  .slider .slick-next {
+    right: 15%;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.28);
+    width: 40px;
+    height: 40px;
+    &:before{
+      content: '\f054';
+      color: rgba(10, 125, 56, 0.56);
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 25px;
+    }
+  }
+}
+
+@media only screen and (max-width : 1750px) {
+  .slider .slick-prev {
+    left: 10%;
+  }
+  .slider .slick-next {
+    right: 10%;
+  }
+  .foot{
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 1550px) {
+  .slider .slick-prev {
+    left: 5%;
+  }
+  .slider .slick-next {
+    right: 5%;
+  }
+}
+
+@media only screen and (max-width : 1200px) {
+  .slider .slick-prev,
+    .slider .slick-next {
+      display: none;
+    }
+  .menu{
+    margin-left: 50px;
+  }
+}
 /**/
 
 /* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {}
+@media only screen and (max-width : 1024px) {
+  .menu{
+    margin-left: 50px;
+  }
+}
 /**/
 
 /* Small Devices, Tablets */

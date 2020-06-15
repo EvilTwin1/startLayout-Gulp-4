@@ -1,0 +1,149 @@
+.review{
+  padding: 0 15px;
+  padding-top: 40px;
+  position: relative;
+}
+.review-wrapp{
+  max-width: 1200px;
+}
+
+.review-card{
+  max-width: 570px;
+  width: 100%;
+  margin: 0 15px 7px;
+  background: #EDEDED;
+  padding: 27px;
+  transition: .5s;
+  &:hover{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &:hover  .review-card__quotes{
+    color: #06A752;
+  }
+  &__content{
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+  }
+  &__quotes{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 288px;
+    text-align: center;
+    width: 124px;
+    height: 174px;
+    color: #356551;
+    margin-top: -50px;
+    margin-bottom: 0;
+    transition: .5s;
+  }
+  &__text{
+    padding-top: 10px;
+    margin: 0;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+  }
+  &__info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  &__name{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #01482B;
+  }
+  &__inst{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #01482B;
+  }
+  &__img{
+    border-radius: 50%;
+    width: 103px;
+    height: 103px;
+  }
+  &__name-wrapp{
+    margin-right: 25px;
+  }
+}
+
+.review-slider{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.review-slider .slick-prev{
+  top: -50px;
+  left: 89%;
+  z-index: 1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  &:before{
+    content: '\f053';
+    color: rgba(10, 125, 56, 0.56);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 25px;
+  }
+}
+
+.review-slider .slick-next{
+  top: -50px;
+  right: 0;
+  z-index: 1;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  &:before{
+    content: '\f054';
+    color: rgba(10, 125, 56, 0.56);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 25px;
+  }
+}
+
+.foot-super-wrapp{
+  position: absolute;
+  top: 250px;
+  right: 0;
+  width: 100%;
+}
+
+.foot-wrapp{
+  position: relative;
+  top: 0;
+  right:0;
+  z-index: 0;
+  overflow: hidden;
+  height: 500px;
+}
+
+.foot{
+  position: absolute;
+  right: -350px;
+  width: 700px;
+  height: auto;
+  &__green{
+    fill: rgba(0, 152, 81, 0.8) !important;
+  }
+}
+
+input[type=checkbox]:checked .review-card__text:hover{
+  color: white;
+}

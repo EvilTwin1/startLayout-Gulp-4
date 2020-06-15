@@ -1,0 +1,126 @@
+.products{
+  padding: 0 15px;
+  position: relative;
+  min-height: 600px;
+  padding-top: 58px;
+}
+.product-card{
+  margin: auto;
+  width: 270px;
+  height: 310px;
+  transition: .5s;
+  box-shadow: 0px 0px 8px rgba(1, 49, 29, 0.19);
+  overflow: hidden;
+
+  &:hover{
+    height: 374px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  &__img-wrapp{
+    padding: 9px;
+  }
+  &__img{
+    width: 100%;
+  }
+  &__title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #535252;
+    text-decoration: none;
+  }
+  &__price{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #05653D;
+    margin: 10px 0 25px;
+  }
+  &__content{
+    padding: 16px;
+  }
+  &__buy{
+    min-width: 121px;
+    display: inline-block;
+  }
+}
+
+.btn-more{
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  box-sizing: border-box;
+  transition: .5s;
+  &:hover{
+    display: block;
+    color: white;
+    text-decoration: none;
+    background: #00864C;
+    transition: .5s;
+    border: 1px solid transparent;
+    //border-radius: 33px;
+
+    //font-family: Montserrat;
+    //font-style: normal;
+    //font-weight: 500;
+    //font-size: 18px;
+    //line-height: 22px;
+    //padding: 15px 22px;
+  }
+}
+
+.product-slider-item{
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.product-slider{
+  justify-content: flex-start;
+}
+
+
+
+.product-slider .slick-prev{
+  top: -50px;
+  left: 89%;
+  z-index: 1;
+  border-radius: 50%;
+  //background-color: rgba(255, 255, 255, 0.28);
+  width: 40px;
+  height: 40px;
+  &:before{
+    content: '\f053';
+    color: rgba(10, 125, 56, 0.56);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 25px;
+  }
+}
+
+.product-slider .slick-next{
+  top: -50px;
+  right: 0;
+  z-index: 1;
+  border-radius: 50%;
+  //background-color: rgba(255, 255, 255, 0.28);
+  width: 40px;
+  height: 40px;
+  &:before{
+    content: '\f054';
+    color: rgba(10, 125, 56, 0.56);
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 25px;
+  }
+}
+
+.products-wrapp{
+  max-width: 1200px;
+}

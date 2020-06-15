@@ -1,12 +1,103 @@
+//@font-face {
+//    font-family: "PTAstraSans-Bold"; /* Имя шрифта */
+//    src: url("../fonts/PTAstraSans-Bold.ttf"); /* Путь к файлу со шрифтом */
+//}
+//@font-face {
+//    font-family: "PTAstraSans-Italic"; /* Имя шрифта */
+//    src: url("../fonts/PTAstraSans-Italic.ttf"); /* Путь к файлу со шрифтом */
+//}
+//@font-face {
+//    font-family: "PTAstraSans-Regular"; /* Имя шрифта */
+//    src: url("../fonts/PTAstraSans-Regular.ttf"); /* Путь к файлу со шрифтом */
+//}
+
+// Bebas Neue
+
+
+
+//@font-face {
+//    font-family: 'Bebas Neue';
+//    src: local('Bebas Neue Thin'), local('BebasNeue-Thin'),
+//          url('../fonts/bebasneue/bebasneuethin.woff2') format('woff2'),
+//          url('../fonts/bebasneue/bebasneuethin.woff') format('woff'),
+//          url('../fonts/bebasneue/bebasneuethin.ttf') format('truetype');
+//    font-weight: 100;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: 'Bebas Neue';
+//    src: local('Bebas Neue Light'), local('BebasNeue-Light'), url('bebasneuelight.woff2') format('woff2'), url('bebasneuelight.woff') format('woff'), url('bebasneuelight.ttf') format('truetype');
+//    font-weight: 200;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: 'Bebas Neue';
+//    src: local('Bebas Neue Book'), local('BebasNeueBook'), url('bebasneuebook.woff2') format('woff2'), url('bebasneuebook.woff') format('woff'), url('bebasneuebook.ttf') format('truetype');
+//    font-weight: 300;
+//    font-style: normal;
+//}
 @font-face {
-    font-family: "PTAstraSans-Bold"; /* Имя шрифта */
-    src: url("../fonts/PTAstraSans-Bold.ttf"); /* Путь к файлу со шрифтом */ 
+    font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular'), local('BebasNeueRegular'),
+         url('../webfonts/bebasneue/bebasneueregular.woff2') format('woff2'),
+         url('../webfonts/bebasneue/bebasneueregular.woff') format('woff'),
+         url('../webfonts/bebasneue/bebasneueregular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
-@font-face {
-    font-family: "PTAstraSans-Italic"; /* Имя шрифта */
-    src: url("../fonts/PTAstraSans-Italic.ttf"); /* Путь к файлу со шрифтом */ 
-}
-@font-face {
-    font-family: "PTAstraSans-Regular"; /* Имя шрифта */
-    src: url("../fonts/PTAstraSans-Regular.ttf"); /* Путь к файлу со шрифтом */ 
-}
+//@font-face {
+//    font-family: 'Bebas Neue';
+//    src: local('Bebas Neue Bold'), local('BebasNeueBold'), url('bebasneuebold.woff2') format('woff2'), url('bebasneuebold.woff') format('woff'), url('bebasneuebold.ttf') format('truetype');
+//    font-weight: 700;
+//    font-style: normal;
+//}
+
+
+// Montserrat
+
+
+//@font-face {
+//    font-family: 'Montserrat';
+//    src: local('Montserrat Hairline'), local('Montserrat-Hairline'),
+//         url('../webfonts/montserrat/montserrathairline.woff2') format('woff2'),
+//         url('../webfonts/montserrat/montserrathairline.woff') format('woff'),
+//         url('../webfonts/montserrat/montserrathairline.ttf') format('truetype');
+//    font-weight: 100;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: 'Montserrat';
+//    src: local('Montserrat Light'), local('Montserrat-Light'),
+//         url('../webfonts/montserrat/montserratlight.woff2') format('woff2'),
+//         url('../webfonts/montserrat/montserratlight.woff') format('woff'),
+//         url('../webfonts/montserrat/montserratlight.ttf') format('truetype');
+//    font-weight: 300;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: 'Montserrat';
+//    src: local('Montserrat'), local('Montserrat-Regular'),
+//         url('../webfonts/montserrat/montserrat.woff2') format('woff2'),
+//         url('../webfonts/montserrat/montserrat.woff') format('woff'),
+//         url('../webfonts/montserrat/montserrat.ttf') format('truetype');
+//    font-weight: 400;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: 'Montserrat';
+//    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+//         url('../webfonts/montserrat/montserratbold.woff2') format('woff2'),
+//         url('../webfonts/montserrat/montserratbold.woff') format('woff'),
+//         url('../webfonts/montserrat/montserratbold.ttf') format('truetype');
+//    font-weight: 700;
+//    font-style: normal;
+//}
+//@font-face {
+//    font-family: 'Montserrat';
+//    src: local('Montserrat Black'), local('Montserrat-Black'),
+//         url('../webfonts/montserrat/montserratblack.woff2') format('woff2'),
+//         url('../webfonts/montserrat/montserratblack.woff') format('woff'),
+//         url('../webfonts/montserrat/montserratblack.ttf') format('truetype');
+//    font-weight: 900;
+//    font-style: normal;
+//}
